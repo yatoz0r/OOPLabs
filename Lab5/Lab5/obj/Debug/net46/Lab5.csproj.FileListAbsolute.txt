@@ -1,0 +1,4 @@
+E:\OOP\Lab5\Lab5\obj\Debug\net46\Lab5.csprojAssemblyReference.cache
+E:\OOP\Lab5\Lab5\obj\Debug\net46\Lab5.AssemblyInfoInputs.cache
+E:\OOP\Lab5\Lab5\obj\Debug\net46\Lab5.AssemblyInfo.cs
+E:\OOP\Lab5\Lab5\obj\Debug\net46\Lab5.csproj.CoreCompileInputs.cache

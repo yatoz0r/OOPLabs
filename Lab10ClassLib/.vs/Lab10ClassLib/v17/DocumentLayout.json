@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\OOP\\Lab10ClassLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|e:\\oop\\lab10classlib\\lab10classlib\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|solutionrelative:lab10classlib\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|E:\\OOP\\Lab10ClassLib\\lab10classlib\\mammal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|solutionrelative:lab10classlib\\mammal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|E:\\OOP\\Lab10ClassLib\\lab10classlib\\artiodactyl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|solutionrelative:lab10classlib\\artiodactyl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|E:\\OOP\\Lab10ClassLib\\lab10classlib\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|solutionrelative:lab10classlib\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|E:\\OOP\\Lab10ClassLib\\lab10classlib\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB8A69-166F-4146-95F5-B958AB2ED750}|Lab10ClassLib\\Lab10ClassLib.csproj|solutionrelative:lab10classlib\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1C324D0-1AC8-41AC-8D19-6518480CE419}|Lab10 Tests\\Lab10 Tests.csproj|E:\\OOP\\Lab10ClassLib\\lab10 tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1C324D0-1AC8-41AC-8D19-6518480CE419}|Lab10 Tests\\Lab10 Tests.csproj|solutionrelative:lab10 tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 231,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10 Tests\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "Lab10 Tests\\GlobalUsings.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10 Tests\\GlobalUsings.cs",
+              "RelativeToolTip": "Lab10 Tests\\GlobalUsings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Animal.cs",
+              "RelativeDocumentMoniker": "Lab10ClassLib\\Animal.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Animal.cs",
+              "RelativeToolTip": "Lab10ClassLib\\Animal.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAADwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mammal.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Mammal.cs",
+              "RelativeDocumentMoniker": "Lab10ClassLib\\Mammal.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Mammal.cs",
+              "RelativeToolTip": "Lab10ClassLib\\Mammal.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bird.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Bird.cs",
+              "RelativeDocumentMoniker": "Lab10ClassLib\\Bird.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Bird.cs",
+              "RelativeToolTip": "Lab10ClassLib\\Bird.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAmwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Interfaces.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Interfaces.cs",
+              "RelativeDocumentMoniker": "Lab10ClassLib\\Interfaces.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Interfaces.cs",
+              "RelativeToolTip": "Lab10ClassLib\\Interfaces.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Artiodactyl.cs",
+              "DocumentMoniker": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Artiodactyl.cs",
+              "RelativeDocumentMoniker": "Lab10ClassLib\\Artiodactyl.cs",
+              "ToolTip": "E:\\OOP\\Lab10ClassLib\\Lab10ClassLib\\Artiodactyl.cs",
+              "RelativeToolTip": "Lab10ClassLib\\Artiodactyl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T17:10:25.707Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

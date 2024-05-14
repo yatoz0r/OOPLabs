@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FilterDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FilterListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SortListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SaveAsDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SyncAsyncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

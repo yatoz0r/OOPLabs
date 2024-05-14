@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "F74nXWmq3zyFzqfREKeDGlGaGXBHvC6prnmhzl00pQEUmdez/vCPCrfdEEDtnJD/CJGAGYuZSRmBybSmXsq59w==",
+  "success": true,
+  "projectFilePath": "E:\\OOP\\Lab16.1\\Lab16.1\\Lab16.1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yatoz\\.nuget\\packages\\memorypack\\1.21.1\\memorypack.1.21.1.nupkg.sha512",
+    "C:\\Users\\yatoz\\.nuget\\packages\\memorypack.core\\1.21.1\\memorypack.core.1.21.1.nupkg.sha512",
+    "C:\\Users\\yatoz\\.nuget\\packages\\memorypack.generator\\1.21.1\\memorypack.generator.1.21.1.nupkg.sha512",
+    "C:\\Users\\yatoz\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
