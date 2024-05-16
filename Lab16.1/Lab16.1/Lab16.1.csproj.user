@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="MainWindowForm.cs">
+    <Compile Update="Forms\FilterDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FilterDialogForm.cs">
+    <Compile Update="Forms\FilterListBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FilterListBoxForm.cs">
+    <Compile Update="Forms\MainWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SortListBoxForm.cs">
+    <Compile Update="Forms\SaveAsDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SaveAsDialogForm.cs">
+    <Compile Update="Forms\SortListBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SyncAsyncForm.cs">
+    <Compile Update="Forms\SyncAsyncForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

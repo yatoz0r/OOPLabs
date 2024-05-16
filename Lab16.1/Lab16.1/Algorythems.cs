@@ -18,6 +18,11 @@ namespace Lab16._1
         {
             if (!IsTextBoxInt(KeyTextBox2))
                 MessageBox.Show("Текст в поле Возраст не является целым числом.");
+            else if (hashTable.isEmpty)
+            {
+                MessageBox.Show("Коллекция пуста");
+                return false;
+            }
             else if (!hashTable.Contains(key))
             {
                 MessageBox.Show("Не найден элемент");
@@ -90,6 +95,6 @@ namespace Lab16._1
             form3.UpdateFilteredCollection(filteredCollection);
             form3.ShowDialog();
         }
-       
+
     }
 }

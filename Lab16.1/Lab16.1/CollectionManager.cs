@@ -1,166 +1,117 @@
 ﻿using Lab10ClassLib;
 using Lab12Hash;
-using MemoryPack;
-using System.Xml.Serialization;
-using Newtonsoft.Json;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text.RegularExpressions;
+using Lab16._1.Serialization;
+using System.Collections;
+using System.Windows.Forms;
 
 namespace Lab16._1
 {
-    [Serializable]
-    [MemoryPackable]
-    public partial class CollectionManager
+    
+    public class CollectionManager
     {
-#pragma warning disable SYSLIB0011
-        JsonSerializerSettings settings = new JsonSerializerSettings()
+        BinaryDump<HashTable<AnimalKey, Animal>> binDump = new BinaryDump<HashTable<AnimalKey, Animal>>();
+        TextDump<HashTable<AnimalKey, Animal>> textDump = new TextDump<HashTable<AnimalKey, Animal>>();
+        JSONDump<HashTable<AnimalKey, Animal>> jsonDump = new JSONDump<HashTable<AnimalKey, Animal>>();
+        XMLDump<HashTable<AnimalKey, Animal>> xmlDump = new XMLDump<HashTable<AnimalKey, Animal>>();
+        public void SaveCollection(SaveFileDialog saveFileDialog, HashTable<AnimalKey, Animal> hashTable)
         {
-            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-            //для полиморфизма, чтобы могла обращаться к атрибутам дочерних классов
-            TypeNameHandling = TypeNameHandling.All,
-            //разбивает файл из одной строки, чтобы норм было
-            Formatting = Formatting.Indented
-        };
-        public void SaveToTextFile(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            using (StreamWriter writer = new StreamWriter(filePath))
+            string selectedSaveType = "";
+            using (var saveDialog = new SaveAsDialogForm())
             {
-                foreach (var element in collection)
+                if(saveDialog.ShowDialog() == DialogResult.Cancel)
                 {
-                    writer.WriteLine($"{element}");
+                    return;
                 }
-            }
-        }
-
-        public HashTable<AnimalKey, Animal> LoadFromTextFile(string filePath)
-        {
-            HashTable<AnimalKey, Animal> collection = new HashTable<AnimalKey, Animal>();
-
-            if (!File.Exists(filePath))
-            {
-                throw new FileNotFoundException("File not found", filePath);
-            }
-
-            foreach (string line in File.ReadLines(filePath))
-            {
-                // Разделяем строку на атрибуты
-                string[] attributes = line.Split('|');
-                if (attributes.Length < 2)
-                {
-                    throw new FormatException("Invalid file format");
-                }
-
-                // Парсим атрибуты элемента
-                string[] keyAttributes = attributes[0].Split(',');
-                if (keyAttributes.Length != 2)
-                {
-                    throw new FormatException("Invalid key format");
-                }
-
-                string[] animalAttributes = attributes[1].Split(',');
-                if (animalAttributes.Length < 3)
-                {
-                    throw new FormatException("Invalid animal format");
-                }
-
-                // Получаем значения атрибутов
-                string keyName = keyAttributes[0].Split(':')[1].Trim();
-                int keyAge = int.Parse(keyAttributes[1].Split(':')[1].Trim());
-
-                string animalName = animalAttributes[0].Split(':')[1].Trim();
-                int animalAge = int.Parse(animalAttributes[1].Split(':')[1].Trim());
-                int animalWeight = int.Parse(Regex.Match(animalAttributes[2].Split(':')[1].Trim(), @"\d+").Value);
-
-                List<string> animalCheck = new List<string>();
-                if (animalAttributes.Length > 3)
-                {
-                    string[] checkAttributes = animalAttributes[3].Split(':');
-                    for (int i = 1; i < checkAttributes.Length; i++)
+                    selectedSaveType = saveDialog.SelectedSaveType;
+                    using (saveFileDialog)
                     {
-                        animalCheck.Add(checkAttributes[i].Trim());
+                        // Устанавливаем фильтр для выбора типов файлов
+                        switch (selectedSaveType)
+                        {
+                            case "Text":
+                                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                                break;
+                            case "Bin":
+                                saveFileDialog.Filter = "Binary files (*.bin)|*.bin|All files (*.*)|*.*";
+                                break;
+                            case "JSON":
+                                saveFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+                                break;
+                            case "XML":
+                                saveFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+                                break;
+                            default:
+                                MessageBox.Show("Неверный тип сохранения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                        }
                     }
+                if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                {
+                    return;
                 }
+                    string filePath = saveFileDialog.FileName;
+                    switch (selectedSaveType)
+                    {
+                        case "Text":
+                            textDump.Save(filePath, hashTable);
+                            break;
+                        case "Bin":
+                            binDump.Save(filePath, hashTable);
+                            break;
+                        case "JSON":
+                            jsonDump.Save(filePath, hashTable);
+                            break;
+                        case "XML":
+                            xmlDump.Save(filePath, hashTable);
+                            break;
+                    }
 
-                AnimalKey key = new AnimalKey(keyName, keyAge);
-                Animal value = new Animal(animalName, animalAge, animalWeight, animalCheck);
-                collection.Add(key, value);
+                    MessageBox.Show("Коллекция успешно сохранена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+
             }
-
-            return collection;
         }
 
-
-        public async Task SaveToTextFileAsync(string filePath, HashTable<AnimalKey, Animal> collection)
+        public HashTable<AnimalKey, Animal> LoadCollection(OpenFileDialog openFileDialog)
         {
-           await Task.Run(() => SaveToTextFile(filePath, collection));
-        }
-
-
-        public void SaveToBinaryFile(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            BinaryFormatter binFormatter = new BinaryFormatter();
-            using (FileStream fileStream = new(filePath, FileMode.Create))
+            openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|Binary files (*.bin)|*.bin|JSON files (*.json)|*.json|XML files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 1; // Устанавливаем фильтр по умолчанию
+            var hashTable = new HashTable<AnimalKey, Animal>();
+            if (openFileDialog.ShowDialog() == DialogResult.Cancel)
             {
-                binFormatter.Serialize(fileStream, collection);
+                return null;
             }
-        }
-
-        public HashTable<AnimalKey, Animal> LoadFromBinaryFile(string filePath)
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            using (FileStream stream = new FileStream(filePath, FileMode.Open))
-            {
-                return (HashTable<AnimalKey, Animal>)formatter.Deserialize(stream);
-            }
-        }
-
-        public async void SaveToBinaryFileAsync(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            await Task.Run(() => SaveToBinaryFile(filePath, collection));
-        }
-
-        public void SaveToJsonFile(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
             
-            string json = JsonConvert.SerializeObject(collection, settings);
-            File.WriteAllText(filePath, json);
-        }
+            string filePath = openFileDialog.FileName;
 
-        public HashTable<AnimalKey, Animal> LoadFromJsonFile(string filePath)
-        {
-            string json = File.ReadAllText(filePath);
-            return (HashTable<AnimalKey, Animal>)JsonConvert.DeserializeObject(json, settings);
-        }
+            // Определяем тип файла и вызываем соответствующий метод загрузки
+            string fileExtension = Path.GetExtension(filePath).ToLower();
+            var loadedCollection = new HashTable<AnimalKey, Animal>(1000);
 
-        public async void SaveToJsonFileAsync(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            await Task.Run(() => SaveToJsonFile(filePath, collection));
-        }
-
-        public void SaveToXmlFile(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            XmlSerializer serializer = new XmlSerializer(collection.GetType());
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            switch (fileExtension)
             {
-                serializer.Serialize(stream, collection);
-            }
-        }
 
-        public HashTable<AnimalKey, Animal> LoadFromXmlFile(string filePath)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(HashTable<AnimalKey, Animal>));
-            using (FileStream stream = new FileStream(filePath, FileMode.Open))
-            {
-                return (HashTable<AnimalKey, Animal>)serializer.Deserialize(stream);
+                case ".txt":
+                    hashTable = textDump.Load(filePath);
+                    break;
+                case ".bin":
+                    hashTable = binDump.Load(filePath);
+                    break;
+                case ".json":
+                    hashTable = jsonDump.Load(filePath);
+                    break;
+                case ".xml":
+                    hashTable = xmlDump.Load(filePath);
+                    break;
+                default:
+                    MessageBox.Show("Неподдерживаемый формат");
+                    break;
             }
-        }
-
-        public async void SaveToXmlFileAsync(string filePath, HashTable<AnimalKey, Animal> collection)
-        {
-            await Task.Run(() => SaveToTextFile(filePath, collection));
+                
+            return hashTable;
         }
 
     }
-#pragma warning disable SYSLIB0011
+
 }

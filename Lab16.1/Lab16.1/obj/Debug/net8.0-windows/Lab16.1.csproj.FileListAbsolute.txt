@@ -43,12 +43,6 @@ E:\OOP\Lab16.1\Lab16.1\bin\Debug\net8.0-windows\Lab10ClassLib.pdb
 E:\OOP\Lab16.1\Lab16.1\bin\Debug\net8.0-windows\Lab12Hash.pdb
 E:\OOP\Lab16.1\Lab16.1\bin\Debug\net8.0-windows\Lab14.pdb
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.csproj.AssemblyReference.cache
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form1.resources
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form2.resources
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form3.resources
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form4.resources
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form5.resources
-E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.Form6.resources
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.csproj.GenerateResource.cache
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.GeneratedMSBuildEditorConfig.editorconfig
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.AssemblyInfoInputs.cache
@@ -60,3 +54,9 @@ E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\refint\Lab16.1.dll
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.pdb
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16.1.genruntimeconfig.cache
 E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\ref\Lab16.1.dll
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.FilterDialogForm.resources
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.FilterListBoxForm.resources
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.MainWindowForm.resources
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.SaveAsDialogForm.resources
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.SortListBoxForm.resources
+E:\OOP\Lab16.1\Lab16.1\obj\Debug\net8.0-windows\Lab16._1.SyncAsyncForm.resources
